@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <style>
+/*font-family: 'Outfit', sans-serif;*/
+    
+    body {
+      display: grid;
+      height: 100vh;
+      place-content: center;
+      background-color: hsl(217, 54%, 11%);
+    }
+    
+    .container {
+      display: grid;
+      justify-content: center;
+      justify-items: start;
+      align-content: center;
+      align-items: center;
+      position: relative;
+      height: 600px;
+      width: 340px;
+      border-radius: 10px;
+      background-color: hsl(216, 50%, 16%);
+    }
+
+    .nft-image {
+      margin: 20px 10px 10px 20px;
+      height: 300px;
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    .wrapper {
+      position: relative;
+    }
+
+
+    .hover-icon {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background-color: hsl(178, 100%, 50%);
+      opacity: 30%;
+      visibility: hidden;
+    }
+
+    h1 {
+      justify-items: start;
+      color: hsl(0, 0%, 100%);
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin: 10px 0px 0px 20px;
+    }
+
+    .desc {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: hsl(215, 51%, 70%);
+      margin-left: 20px;
+    }
+
+    .data {
+      display: flex;
+    }
+
+    .svg-eth, .svg-time {
+      margin-right: 5px;
+    }
+
+    .ETH {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: hsl(178, 100%, 50%);
+      padding: 0px 30px 0px 20px;
+    }
+
+    .time {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: hsl(215, 51%, 70%);
+      padding: 0px 0px 0px 80px;
+    }
+
+    .line {
+      border: 0.1px solid hsl(215, 51%, 70%);
+      background-color: hsl(215, 51%, 70%);
+      width: 300px;
+    }
+
+    .artist {
+      display: flex;
+      position: relative;
+    }
+    
+
+    .avatar {
+      border: 1px solid hsl(0, 0%, 100%);
+      border-radius: 50%;
+      height: 30px;
+      margin: 10px 0px 5px 20px;
+    }
+
+    .creator {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: hsl(0, 0%, 100%);
+      margin: 15.5px 0px 20px 20px;
+    }
+
+    span {
+      color: hsl(215, 51%, 70%);
+    }
+
+    .hover-icon:hover {
+      visibility: visible;
+    }
+
+    h1:hover {
+      color: hsl(178, 100%, 50%);
+    }
+
+    .creator:hover {
+      color: hsl(178, 100%, 50%);
+    }
+
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="wrapper">
+    <img src="./images/image-equilibrium.jpg" alt="image of equilibrium" class="nft-image">
+  </div>
+  <div class="overlay">
+    <img src="./images/icon-view.svg" alt="view" class="hover-icon">
+  </div>
+  
+
+  <h1>Equilibrium #3429</h1>
+
+  <p class="desc">Our Equilibrium collection promotes balance and calm.</p>
+
+  <div class="data">
+  <h2 class="ETH">
+    <svg class="svg-eth" width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/>
+    </svg>0.041 ETH</h2>
+
+  <h2 class="time">
+    <svg class="svg-time" width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/>
+  </svg>3 days left</h2>
+  </div>
+
+<hr class="line"></hr>
+
+  <div class="artist">
+    <img src="./images/image-avatar.png" alt="avatar" class="avatar">
+    <h3 class="creator"><span>Creation of</span> Jules Wyvern</h3>
+  </div>
+
+</div>
+
+</body>
+</html>
